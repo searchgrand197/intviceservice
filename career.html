@@ -184,6 +184,18 @@
             padding: 2rem 1rem;
             margin-top: 3rem;
         }
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #1976d2;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
@@ -209,19 +221,12 @@
         </nav>
     </header>
     <section class="career" id="career">
-        <h2 class="section-title">Career / Internship Opportunities</h2>
-        <div class="career-content">
-            <p>We are always looking for talented and passionate individuals to join our team! If you are interested in a career or internship at Intvice Technologies, please send your resume and a brief cover letter to <a href="mailto:intvicetechnologies@gmail.com">intvicetechnologies@gmail.com</a>.</p>
-            <ul>
-                <li>Software Development Internships</li>
-                <li>IoT Project Internships</li>
-                <li>Full-time Software Engineer Roles</li>
-                <li>Web Development Opportunities</li>
-            </ul>
-            <p>We offer a collaborative environment, mentorship, and opportunities to work on cutting-edge projects. Start your journey with us!</p>
-        </div>
-        <div class="career-form" style="margin-top:2.5rem;">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeZdtNHud0Koj-18WMtTOhKubGqq1HKPtbBhU5BUv5fKdfRkQ/viewform?embedded=true" width="100%" height="1371" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <h2 class="section-title">Apply Below</h2>
+        <div class="career-form" style="margin-top:2.5rem; position:relative; min-height:200px;">
+            <div id="form-loader" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.85);z-index:2;">
+                <div class="loader"></div>
+            </div>
+            <iframe id="google-form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSeZdtNHud0Koj-18WMtTOhKubGqq1HKPtbBhU5BUv5fKdfRkQ/viewform?embedded=true" width="100%" height="1371" frameborder="0" marginheight="0" marginwidth="0" style="border:none;z-index:1;">Loading…</iframe>
         </div>
     </section>
     <footer class="footer">
@@ -241,6 +246,12 @@
         navLinks.classList.remove('open');
         hamburger.classList.remove('open');
       });
+    });
+    // Show loader until Google Form iframe loads
+    const formLoader = document.getElementById('form-loader');
+    const googleFormFrame = document.getElementById('google-form-frame');
+    googleFormFrame.addEventListener('load', function() {
+      if(formLoader) formLoader.style.display = 'none';
     });
     </script>
 </body>
