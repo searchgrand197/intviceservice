@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Remove .html extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Specific rewrite for workshop page
+RewriteRule ^workshop/?$ workshop.html [NC,L]
+
+# Ensure proper MIME types
+AddType text/html .html
+AddType text/css .css
+AddType application/javascript .js 
