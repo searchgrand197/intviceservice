@@ -1,5 +1,0 @@
-# Redirect /workshop to /workshop.html
-/workshop /workshop.html 200
-
-# Remove .html extensions from URLs
-/*.html /:splat 200 
