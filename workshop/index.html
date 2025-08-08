@@ -233,6 +233,20 @@
             transform: scale(1.05);
         }
 
+        .workshop-poster {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .workshop-button:hover .workshop-poster {
+            transform: scale(1.02);
+        }
+
         .footer {
             background: linear-gradient(135deg, #1a237e, #0d47a1);
             color: white;
@@ -326,6 +340,11 @@
             .workshop-button .details li {
                 font-size: 0.85rem;
             }
+
+            .workshop-poster {
+                max-width: 250px;
+                margin-bottom: 1rem;
+            }
         }
     </style>
 </head>
@@ -362,6 +381,7 @@
             <div class="form-container">
                 <div class="workshop-buttons">
                     <a href="https://forms.gle/vf6dB2DVEdG3hLzf6" target="_blank" class="workshop-button">
+                        <img src="workshop-poster.jpg" alt="Robotics + Coding Workshop Poster" class="workshop-poster">
                         <h3>Woodstock Public School</h3>
                         <p>Exclusively for Woodstock Public School Students</p>
                         <div class="details">
@@ -378,6 +398,7 @@
                         <div class="cta">Register Now</div>
                     </a>
                     <a href="https://forms.gle/xeA6uyhxHMx6UuS1A" target="_blank" class="workshop-button">
+                        <img src="workshop-poster.jpg" alt="Robotics + Coding Workshop Poster" class="workshop-poster">
                         <h3>Supreme Sr. Sec. School</h3>
                         <p>Exclusively for Supreme Sr. Sec. School Students</p>
                         <div class="details">
