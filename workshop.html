@@ -157,6 +157,82 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
+        .workshop-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .workshop-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #1a237e, #0d47a1);
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(26,35,126,0.3);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .workshop-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(26,35,126,0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        .workshop-button h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #64b5f6;
+        }
+
+        .workshop-button p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .workshop-button .details {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .workshop-button .details ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .workshop-button .details li {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .workshop-button .cta {
+            background: #64b5f6;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .workshop-button:hover .cta {
+            background: #42a5f5;
+            transform: scale(1.05);
+        }
+
         .footer {
             background: linear-gradient(135deg, #1a237e, #0d47a1);
             color: white;
@@ -230,9 +306,25 @@
                 padding: 2rem 1rem;
             }
 
-            .form-container iframe {
-                width: 100%;
-                max-width: 640px;
+            .workshop-buttons {
+                gap: 1.5rem;
+                padding: 0 1rem;
+            }
+
+            .workshop-button {
+                padding: 1.5rem;
+            }
+
+            .workshop-button h3 {
+                font-size: 1.3rem;
+            }
+
+            .workshop-button .details {
+                padding: 0.8rem;
+            }
+
+            .workshop-button .details li {
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -268,7 +360,40 @@
             </div>
             
             <div class="form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOArd5UuNkWYTdj7BLysrDnAV8AVtR8shEsBACX_S3A-38pA/viewform?embedded=true" width="640" height="1827" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <div class="workshop-buttons">
+                    <a href="https://forms.gle/vf6dB2DVEdG3hLzf6" target="_blank" class="workshop-button">
+                        <h3>Woodstock Public School</h3>
+                        <p>Exclusively for Woodstock Public School Students</p>
+                        <div class="details">
+                            <ul>
+                                <li>📅 Starting from August First Week</li>
+                                <li>⏰ 3 Days | 2 Hours Daily</li>
+                                <li>💸 Fee: ₹400 Only</li>
+                                <li>🧠 20% Theory + 🛠️ 80% Practical</li>
+                                <li>🤖 Hands-on Robot Building & Coding</li>
+                                <li>✅ Certificate after Workshop</li>
+                                <li>🎁 Exciting Gifts during Workshop</li>
+                            </ul>
+                        </div>
+                        <div class="cta">Register Now</div>
+                    </a>
+                    <a href="https://forms.gle/xeA6uyhxHMx6UuS1A" target="_blank" class="workshop-button">
+                        <h3>Supreme Sr. Sec. School</h3>
+                        <p>Exclusively for Supreme Sr. Sec. School Students</p>
+                        <div class="details">
+                            <ul>
+                                <li>📅 Starting after Mid August</li>
+                                <li>⏰ 3 Days | 2 Hours Daily</li>
+                                <li>💸 Fee: ₹400 Only</li>
+                                <li>🧠 20% Theory + 🛠️ 80% Practical</li>
+                                <li>🤖 Hands-on Robot Building & Coding</li>
+                                <li>✅ Certificate after Workshop</li>
+                                <li>🎁 Exciting Gifts during Workshop</li>
+                            </ul>
+                        </div>
+                        <div class="cta">Register Now</div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
